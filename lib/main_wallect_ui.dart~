@@ -1,0 +1,289 @@
+import 'package:flutter/material.dart';
+
+class Wallet_ui extends StatefulWidget {
+  const Wallet_ui({super.key});
+
+  @override
+  State<Wallet_ui> createState() => _Wallet_uiState();
+}
+
+class _Wallet_uiState extends State<Wallet_ui> {
+  final GlobalKey<ScaffoldState> _scaffoldKey =  GlobalKey<ScaffoldState>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      key: _scaffoldKey,
+      drawer: Drawer(
+          child: Container(
+          )
+      ),
+      backgroundColor: Colors.black54,
+      body: SafeArea(
+        child: Column(
+          children: [
+            Container(
+              width: double.infinity,
+              height: 300,
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                    end: Alignment.topRight,
+                    colors: [
+                  Colors.indigo.withOpacity(0.9),Colors.white,Colors.indigo.withOpacity(0.9)
+                ]),
+                borderRadius: BorderRadius.circular(35),
+              ),
+              child: Stack(
+                children: [
+                  Column(
+                    children: [
+                      Row(
+                        children: [
+                          IconButton(onPressed: () {
+                            _scaffoldKey.currentState?.openDrawer();
+
+                          }, icon: Icon(Icons.menu,color: Colors.white)),
+                          SizedBox(
+                            width: 260,
+                          ),
+                          Icon(Icons.snapchat,color: Colors.white),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Icon(Icons.add,color: Colors.white),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("Main Wallet",style: TextStyle(color: Colors.white,
+                          fontSize: 40,fontWeight: FontWeight.bold),),
+                          Icon(Icons.edit,color: Colors.white,)
+                        ],
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+
+            //this conText is grediant Container below.
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                 Container(
+                   child: Center(child: Text("Price Option",style: TextStyle(
+                     color: Colors.white
+                   ),)),
+                   width: 120,
+                   height: 30,
+                   decoration: BoxDecoration(
+                     borderRadius: BorderRadius.circular(20),
+                     color: Colors.lightBlueAccent.shade100,
+
+                   ),
+                 ),
+                  Container(
+                    child: Center(child: Text("Wallet Connection",style: TextStyle(
+                        color: Colors.white
+                    ),)),
+                    width: 130,
+                    height: 30,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.lightBlueAccent.shade100,
+
+                    ),
+                  ),
+                  Container(
+                    child: Center(child: Text("Manage Tokens",style: TextStyle(
+                        color: Colors.white
+                    ),)),
+                    width: 120,
+                    height: 30,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.lightBlueAccent.shade100,
+
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Container(
+                    child: Center(child: Text("Tokens",
+                        style: TextStyle(color: Colors.white,fontSize: 20))),
+                    width: 188,
+                    height: 30,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.deepPurple.withOpacity(0.9),
+                    ),
+                  ),
+                  Container(
+                    child: Center(child: Text("NFTs",
+                        style: TextStyle(color: Colors.white,fontSize: 20))),
+                    width: 188,
+                    height: 30,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.black.withOpacity(0.7),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Container(
+                    width: 375,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.lightBlueAccent.shade100,
+                    ),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: CircleAvatar(
+                            foregroundImage: AssetImage("lib/Asset/Image/cc.jpg"),
+                          ),
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Dive Wallact Tokens",style: TextStyle(color: Colors.white)),
+                            Text("+5.87%",style: TextStyle(
+                                color: Colors.green
+                            )),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 80,
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("1,440,000DWT",style: TextStyle(color: Colors.white)),
+                            Text("-\$877560%",style: TextStyle(
+                                color: Colors.white,fontSize: 12
+                            )),
+                          ],
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Container(
+                    width: 375,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.lightBlueAccent.shade100,
+                    ),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: CircleAvatar(
+                            foregroundImage: AssetImage("lib/Asset/Image/cc.jpg"),
+                          ),
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Dive Wallact Tokens",style: TextStyle(color: Colors.white)),
+                            Text("+5.87%",style: TextStyle(
+                              color: Colors.green
+                            )),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 80,
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("1,440,000DWT",style: TextStyle(color: Colors.white)),
+                            Text("-\$877560%",style: TextStyle(
+                                color: Colors.white,fontSize: 12
+                            )),
+                          ],
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Container(
+                    width: 375,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: Colors.lightBlueAccent.shade100,
+                    ),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: CircleAvatar(
+                            foregroundImage: AssetImage("lib/Asset/Image/cc.jpg"),
+                          ),
+                        ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("Dive Wallact Tokens",style: TextStyle(color: Colors.white)),
+                            Text("+5.87%",style: TextStyle(
+                                color: Colors.green
+                            )),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 80,
+                        ),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text("1,440,000DWT",style: TextStyle(color: Colors.white)),
+                            Text("-\$877560%",style: TextStyle(
+                                color: Colors.white,fontSize: 12
+                            )),
+                          ],
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
