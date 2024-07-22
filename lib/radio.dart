@@ -8,25 +8,121 @@ class Radio_ex extends StatefulWidget {
 }
 
 class _Radio_exState extends State<Radio_ex> {
-   int selectedValue= 0;
+   int? selectedValue;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Center(child: Text("this is radio")),
       ),
-      body: RadioListTile<int>(
-        title: Text('Option 1'),
-        subtitle: Text('Description of Option 1'),
-        value: 0,
-        groupValue: selectedValue,
-        onChanged: (int? value) {
-          setState(() { selectedValue = value!;
+      body: Column(
+        children: [
+          /*Row(
+            children: [
+              Radio(value: 0, groupValue: selectedValue, onChanged: (value) {
+                return setState(() {
+                  selectedValue = value!;
+                });
+              },),
+              Text("A."),
+              Text("data"),
+            ],
+          ),
+          Row(
+            children: [
+              Radio(value: 1, groupValue: selectedValue, onChanged: (value) {
+                return setState(() {
+                  selectedValue = value!;
+                });
+              },),
+              Text("B."),
+              Text("data"),
+            ],
+          ),
+          Row(
+            children: [
+              Radio(value: 2, groupValue: selectedValue, onChanged: (value) {
+                return setState(() {
+                  selectedValue = value!;
+                });
+              },),
+              Text("C."),
+              Text("data"),
+            ],
+          ),
+          Row(
+            children: [
+              Radio(value: 3, groupValue: selectedValue, onChanged: (value) {
+                return setState(() {
+                  selectedValue = value!;
+                });
+              },),
+              Text("D."),
+              Text("data"),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              ElevatedButton(onPressed: () {
+                return setState(() {
+                  Text("true");
+                });
+              }, child: Text("Submit")),
+              ElevatedButton(onPressed: () {
+                return setState(() {
+                  Text("true");
+                });
+              }, child: Text("Cencal"))
+            ],
+          ),*/
+          RadioListTile(
+            title: Text("Hello World"),
+              subtitle: Text("data"),
+              value: 1,
+              groupValue: selectedValue,
+              onChanged: (value) {
+                return setState(() {
+                  selectedValue = value!;
+                });
+              },),
+          RadioListTile(
+            title: Text("Hello World"),
+            subtitle: Text("data"),
+            value: 2,
+            groupValue: selectedValue,
+            onChanged: (value) {
+              return setState(() {
+                selectedValue = value!;
+              });
+            },),
+          RadioListTile(
+            title: Text("Hello World"),
+            subtitle: Text("data"),
+            value: 3,
+            groupValue: selectedValue,
+            onChanged: (value) {
+              return setState(() {
+                selectedValue = value!;
+              });
+            },),
+          RadioListTile(
+            title: Text("Hello World"),
+            subtitle: Text("data"),
+            value: 4,
+            groupValue: selectedValue,
+            onChanged: (value) {
+              return setState(() {
+                selectedValue = value!;
+              });
+            },),
+          CircularProgressIndicator(),
+          LinearProgressIndicator(),
 
-          });
-        },
+
+
+        ],
       ),
-
 
     );
   }

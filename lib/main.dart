@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:stack/AlertDialog.dart';
 import 'package:stack/main_wallect_ui.dart';
 import 'package:stack/radio.dart';
+import 'package:stack/slider_demo.dart';
 import 'package:stack/tost.dart';
 import 'Courses_ui.dart';
 import 'kit_templet_ui.dart';
@@ -33,7 +34,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: Radio_ex(),
+      home: Slider_demo(),
     );
   }
 }
